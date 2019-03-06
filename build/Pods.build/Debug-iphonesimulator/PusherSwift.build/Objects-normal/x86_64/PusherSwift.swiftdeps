@@ -1,0 +1,465 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "PROTOCOL"
+- "VERSION"
+- "CLIENT_NAME"
+- "Pusher"
+- "constructUrl"
+provides-nominal:
+- "11PusherSwift0A0C"
+provides-member:
+- ["11PusherSwift0A0C", ""]
+provides-dynamic-lookup:
+- "bind"
+- "connect"
+- "connection"
+- "delegate"
+- "disconnect"
+- "nativePusher"
+- "subscribe"
+- "subscribeToPresenceChannel"
+- "unbind"
+- "unbindAll"
+- "unsubscribe"
+depends-top-level:
+- "AssignmentPrecedence"
+- "CLIENT_NAME"
+- "FloatLiteralType"
+- "IntegerLiteralType"
+- "NSObject"
+- "NativePusher"
+- "PROTOCOL"
+- "Pusher"
+- "PusherAuth"
+- "PusherChannel"
+- "PusherClientOptions"
+- "PusherConnection"
+- "PusherDelegate"
+- "PusherPresenceChannel"
+- "PusherPresenceChannelMember"
+- "String"
+- "StringLiteralType"
+- !private "URL"
+- !private "UnicodeScalarType"
+- "VERSION"
+- "Void"
+- !private "WebSocket"
+- "constructUrl"
+depends-member:
+- ["SK", "init"]
+- ["SK", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "NativePusher"]
+- !private ["s7CVarArgP", "PusherClientOptions"]
+- !private ["s7CVarArgP", "PusherConnection"]
+- !private ["s7CVarArgP", "URL"]
+- !private ["s7CVarArgP", "WebSocket"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "addCallbackToGlobalChannel"]
+- !private ["s7CVarArgP", "connect"]
+- !private ["s7CVarArgP", "connection"]
+- !private ["s7CVarArgP", "constructUrl"]
+- !private ["s7CVarArgP", "createGlobalChannel"]
+- !private ["s7CVarArgP", "delegate"]
+- !private ["s7CVarArgP", "disconnect"]
+- !private ["s7CVarArgP", "encrypted"]
+- !private ["s7CVarArgP", "host"]
+- ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "key"]
+- !private ["s7CVarArgP", "nativePusher"]
+- !private ["s7CVarArgP", "port"]
+- !private ["s7CVarArgP", "removeAllCallbacksFromGlobalChannel"]
+- !private ["s7CVarArgP", "removeCallbackFromGlobalChannel"]
+- !private ["s7CVarArgP", "setPusherAppKey"]
+- !private ["s7CVarArgP", "subscribe"]
+- !private ["s7CVarArgP", "subscribeToPresenceChannel"]
+- !private ["s7CVarArgP", "unsubscribe"]
+- ["Sl", "init"]
+- ["Sl", "init"]
+- ["SL", "init"]
+- ["SL", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "NativePusher"]
+- !private ["s28CustomDebugStringConvertibleP", "PusherClientOptions"]
+- !private ["s28CustomDebugStringConvertibleP", "PusherConnection"]
+- !private ["s28CustomDebugStringConvertibleP", "URL"]
+- !private ["s28CustomDebugStringConvertibleP", "WebSocket"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "addCallbackToGlobalChannel"]
+- !private ["s28CustomDebugStringConvertibleP", "connect"]
+- !private ["s28CustomDebugStringConvertibleP", "connection"]
+- !private ["s28CustomDebugStringConvertibleP", "constructUrl"]
+- !private ["s28CustomDebugStringConvertibleP", "createGlobalChannel"]
+- !private ["s28CustomDebugStringConvertibleP", "delegate"]
+- !private ["s28CustomDebugStringConvertibleP", "disconnect"]
+- !private ["s28CustomDebugStringConvertibleP", "encrypted"]
+- !private ["s28CustomDebugStringConvertibleP", "host"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "key"]
+- !private ["s28CustomDebugStringConvertibleP", "nativePusher"]
+- !private ["s28CustomDebugStringConvertibleP", "port"]
+- !private ["s28CustomDebugStringConvertibleP", "removeAllCallbacksFromGlobalChannel"]
+- !private ["s28CustomDebugStringConvertibleP", "removeCallbackFromGlobalChannel"]
+- !private ["s28CustomDebugStringConvertibleP", "setPusherAppKey"]
+- !private ["s28CustomDebugStringConvertibleP", "subscribe"]
+- !private ["s28CustomDebugStringConvertibleP", "subscribeToPresenceChannel"]
+- !private ["s28CustomDebugStringConvertibleP", "unsubscribe"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- ["s17CustomReflectableP", "init"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "NativePusher"]
+- !private ["s23CustomStringConvertibleP", "PusherClientOptions"]
+- !private ["s23CustomStringConvertibleP", "PusherConnection"]
+- !private ["s23CustomStringConvertibleP", "URL"]
+- !private ["s23CustomStringConvertibleP", "WebSocket"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "addCallbackToGlobalChannel"]
+- !private ["s23CustomStringConvertibleP", "connect"]
+- !private ["s23CustomStringConvertibleP", "connection"]
+- !private ["s23CustomStringConvertibleP", "constructUrl"]
+- !private ["s23CustomStringConvertibleP", "createGlobalChannel"]
+- !private ["s23CustomStringConvertibleP", "delegate"]
+- !private ["s23CustomStringConvertibleP", "disconnect"]
+- !private ["s23CustomStringConvertibleP", "encrypted"]
+- !private ["s23CustomStringConvertibleP", "host"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "key"]
+- !private ["s23CustomStringConvertibleP", "nativePusher"]
+- !private ["s23CustomStringConvertibleP", "port"]
+- !private ["s23CustomStringConvertibleP", "removeAllCallbacksFromGlobalChannel"]
+- !private ["s23CustomStringConvertibleP", "removeCallbackFromGlobalChannel"]
+- !private ["s23CustomStringConvertibleP", "setPusherAppKey"]
+- !private ["s23CustomStringConvertibleP", "subscribe"]
+- !private ["s23CustomStringConvertibleP", "subscribeToPresenceChannel"]
+- !private ["s23CustomStringConvertibleP", "unsubscribe"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- ["Se", "init"]
+- ["Se", "init"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- ["SE", "init"]
+- ["SE", "init"]
+- !private ["SQ", "NativePusher"]
+- !private ["SQ", "PusherClientOptions"]
+- !private ["SQ", "PusherConnection"]
+- !private ["SQ", "URL"]
+- !private ["SQ", "WebSocket"]
+- ["SQ", ""]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "addCallbackToGlobalChannel"]
+- !private ["SQ", "connect"]
+- !private ["SQ", "connection"]
+- !private ["SQ", "constructUrl"]
+- !private ["SQ", "createGlobalChannel"]
+- !private ["SQ", "delegate"]
+- !private ["SQ", "disconnect"]
+- !private ["SQ", "encrypted"]
+- !private ["SQ", "host"]
+- ["SQ", "init"]
+- ["SQ", "init"]
+- !private ["SQ", "key"]
+- !private ["SQ", "nativePusher"]
+- !private ["SQ", "port"]
+- !private ["SQ", "removeAllCallbacksFromGlobalChannel"]
+- !private ["SQ", "removeCallbackFromGlobalChannel"]
+- !private ["SQ", "setPusherAppKey"]
+- !private ["SQ", "subscribe"]
+- !private ["SQ", "subscribeToPresenceChannel"]
+- !private ["SQ", "unsubscribe"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["SH", "NativePusher"]
+- !private ["SH", "PusherClientOptions"]
+- !private ["SH", "PusherConnection"]
+- !private ["SH", "URL"]
+- !private ["SH", "WebSocket"]
+- ["SH", ""]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "addCallbackToGlobalChannel"]
+- !private ["SH", "connect"]
+- !private ["SH", "connection"]
+- !private ["SH", "constructUrl"]
+- !private ["SH", "createGlobalChannel"]
+- !private ["SH", "delegate"]
+- !private ["SH", "disconnect"]
+- !private ["SH", "encrypted"]
+- !private ["SH", "host"]
+- ["SH", "init"]
+- ["SH", "init"]
+- !private ["SH", "key"]
+- !private ["SH", "nativePusher"]
+- !private ["SH", "port"]
+- !private ["SH", "removeAllCallbacksFromGlobalChannel"]
+- !private ["SH", "removeCallbackFromGlobalChannel"]
+- !private ["SH", "setPusherAppKey"]
+- !private ["SH", "subscribe"]
+- !private ["SH", "subscribeToPresenceChannel"]
+- !private ["SH", "unsubscribe"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s10MirrorPathP", "init"]
+- ["s10MirrorPathP", "init"]
+- ["So8NSObjectC", "NativePusher"]
+- ["So8NSObjectC", "PusherAuth"]
+- ["So8NSObjectC", "PusherChannel"]
+- ["So8NSObjectC", "PusherClientOptions"]
+- ["So8NSObjectC", "PusherConnection"]
+- ["So8NSObjectC", "PusherDelegate"]
+- ["So8NSObjectC", "PusherPresenceChannel"]
+- ["So8NSObjectC", "PusherPresenceChannelMember"]
+- ["So8NSObjectC", "String"]
+- !private ["So8NSObjectC", "URL"]
+- ["So8NSObjectC", "Void"]
+- !private ["So8NSObjectC", "WebSocket"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "addCallbackToGlobalChannel"]
+- ["So8NSObjectC", "bind"]
+- ["So8NSObjectC", "connect"]
+- ["So8NSObjectC", "connection"]
+- !private ["So8NSObjectC", "constructUrl"]
+- !private ["So8NSObjectC", "createGlobalChannel"]
+- ["So8NSObjectC", "delegate"]
+- ["So8NSObjectC", "disconnect"]
+- !private ["So8NSObjectC", "encrypted"]
+- !private ["So8NSObjectC", "host"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "key"]
+- ["So8NSObjectC", "nativePusher"]
+- !private ["So8NSObjectC", "port"]
+- !private ["So8NSObjectC", "removeAllCallbacksFromGlobalChannel"]
+- !private ["So8NSObjectC", "removeCallbackFromGlobalChannel"]
+- !private ["So8NSObjectC", "setPusherAppKey"]
+- ["So8NSObjectC", "subscribe"]
+- ["So8NSObjectC", "subscribeToPresenceChannel"]
+- ["So8NSObjectC", "unbind"]
+- ["So8NSObjectC", "unbindAll"]
+- ["So8NSObjectC", "unsubscribe"]
+- !private ["So8NSObjectP", "NativePusher"]
+- !private ["So8NSObjectP", "PusherClientOptions"]
+- !private ["So8NSObjectP", "PusherConnection"]
+- !private ["So8NSObjectP", "URL"]
+- !private ["So8NSObjectP", "WebSocket"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "addCallbackToGlobalChannel"]
+- !private ["So8NSObjectP", "connect"]
+- !private ["So8NSObjectP", "connection"]
+- !private ["So8NSObjectP", "constructUrl"]
+- !private ["So8NSObjectP", "createGlobalChannel"]
+- !private ["So8NSObjectP", "delegate"]
+- !private ["So8NSObjectP", "disconnect"]
+- !private ["So8NSObjectP", "encrypted"]
+- !private ["So8NSObjectP", "host"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "key"]
+- !private ["So8NSObjectP", "nativePusher"]
+- !private ["So8NSObjectP", "port"]
+- !private ["So8NSObjectP", "removeAllCallbacksFromGlobalChannel"]
+- !private ["So8NSObjectP", "removeCallbackFromGlobalChannel"]
+- !private ["So8NSObjectP", "setPusherAppKey"]
+- !private ["So8NSObjectP", "subscribe"]
+- !private ["So8NSObjectP", "subscribeToPresenceChannel"]
+- !private ["So8NSObjectP", "unsubscribe"]
+- !private ["11PusherSwift06NativeA0C", "delegate"]
+- !private ["11PusherSwift06NativeA0C", "init"]
+- !private ["11PusherSwift06NativeA0C", "setPusherAppKey"]
+- ["11PusherSwift0A0C", "NativePusher"]
+- ["11PusherSwift0A0C", "PusherAuth"]
+- ["11PusherSwift0A0C", "PusherChannel"]
+- ["11PusherSwift0A0C", "PusherClientOptions"]
+- ["11PusherSwift0A0C", "PusherConnection"]
+- ["11PusherSwift0A0C", "PusherDelegate"]
+- ["11PusherSwift0A0C", "PusherPresenceChannel"]
+- ["11PusherSwift0A0C", "PusherPresenceChannelMember"]
+- ["11PusherSwift0A0C", "String"]
+- !private ["11PusherSwift0A0C", "URL"]
+- ["11PusherSwift0A0C", "Void"]
+- !private ["11PusherSwift0A0C", "WebSocket"]
+- ["11PusherSwift0A0C", "bind"]
+- ["11PusherSwift0A0C", "connect"]
+- ["11PusherSwift0A0C", "connection"]
+- !private ["11PusherSwift0A0C", "constructUrl"]
+- ["11PusherSwift0A0C", "delegate"]
+- ["11PusherSwift0A0C", "disconnect"]
+- ["11PusherSwift0A0C", "init"]
+- !private ["11PusherSwift0A0C", "key"]
+- ["11PusherSwift0A0C", "nativePusher"]
+- ["11PusherSwift0A0C", "subscribe"]
+- ["11PusherSwift0A0C", "subscribeToPresenceChannel"]
+- ["11PusherSwift0A0C", "unbind"]
+- ["11PusherSwift0A0C", "unbindAll"]
+- ["11PusherSwift0A0C", "unsubscribe"]
+- !private ["11PusherSwift0A13ClientOptionsC", "encrypted"]
+- !private ["11PusherSwift0A13ClientOptionsC", "host"]
+- !private ["11PusherSwift0A13ClientOptionsC", "init"]
+- !private ["11PusherSwift0A13ClientOptionsC", "port"]
+- !private ["11PusherSwift0A10ConnectionC", "addCallbackToGlobalChannel"]
+- !private ["11PusherSwift0A10ConnectionC", "connect"]
+- !private ["11PusherSwift0A10ConnectionC", "createGlobalChannel"]
+- !private ["11PusherSwift0A10ConnectionC", "delegate"]
+- !private ["11PusherSwift0A10ConnectionC", "disconnect"]
+- !private ["11PusherSwift0A10ConnectionC", "init"]
+- !private ["11PusherSwift0A10ConnectionC", "removeAllCallbacksFromGlobalChannel"]
+- !private ["11PusherSwift0A10ConnectionC", "removeCallbackFromGlobalChannel"]
+- !private ["11PusherSwift0A10ConnectionC", "subscribe"]
+- !private ["11PusherSwift0A10ConnectionC", "subscribeToPresenceChannel"]
+- !private ["11PusherSwift0A10ConnectionC", "unsubscribe"]
+- ["Sm", "init"]
+- ["Sm", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- ["ST", "init"]
+- ["ST", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["So16NSStreamDelegateP", "init"]
+- ["SS", "init"]
+- ["SS", "init"]
+- ["Sy", "init"]
+- ["Sy", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["10Foundation3URLV", "init"]
+- !private ["11PusherSwift9WebSocketC", "init"]
+- !private ["11PusherSwift17WebSocketDelegateP", "addCallbackToGlobalChannel"]
+- !private ["11PusherSwift17WebSocketDelegateP", "connect"]
+- !private ["11PusherSwift17WebSocketDelegateP", "createGlobalChannel"]
+- !private ["11PusherSwift17WebSocketDelegateP", "delegate"]
+- !private ["11PusherSwift17WebSocketDelegateP", "disconnect"]
+- !private ["11PusherSwift17WebSocketDelegateP", "init"]
+- !private ["11PusherSwift17WebSocketDelegateP", "removeAllCallbacksFromGlobalChannel"]
+- !private ["11PusherSwift17WebSocketDelegateP", "removeCallbackFromGlobalChannel"]
+- !private ["11PusherSwift17WebSocketDelegateP", "subscribe"]
+- !private ["11PusherSwift17WebSocketDelegateP", "subscribeToPresenceChannel"]
+- !private ["11PusherSwift17WebSocketDelegateP", "unsubscribe"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s34_ExpressibleByFileReferenceLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NativePusher"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "PusherClientOptions"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "PusherConnection"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "URL"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "WebSocket"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addCallbackToGlobalChannel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "connect"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "connection"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "constructUrl"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "createGlobalChannel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "disconnect"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "encrypted"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "host"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "key"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "nativePusher"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "port"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "removeAllCallbacksFromGlobalChannel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "removeCallbackFromGlobalChannel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setPusherAppKey"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "subscribe"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "subscribeToPresenceChannel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "unsubscribe"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- "SK"
+- !private "Sb"
+- "s7CVarArgP"
+- "Sl"
+- "SL"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "Se"
+- "SE"
+- "SQ"
+- !private "s27ExpressibleByBooleanLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "SH"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "11PusherSwift06NativeA0C"
+- "11PusherSwift0A0C"
+- !private "11PusherSwift0A13ClientOptionsC"
+- !private "11PusherSwift0A10ConnectionC"
+- "Sm"
+- !private "10Foundation20ReferenceConvertibleP"
+- "ST"
+- !private "s12StaticStringV"
+- !private "So16NSStreamDelegateP"
+- "SS"
+- "Sy"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "10Foundation3URLV"
+- !private "11PusherSwift9WebSocketC"
+- !private "11PusherSwift17WebSocketDelegateP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s34_ExpressibleByFileReferenceLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/angel/Desktop/CapstoneProject/Pods/Target Support Files/PusherSwift/PusherSwift-umbrella.h"
+- "/Users/angel/Desktop/CapstoneProject/build/Pods.build/Debug-iphonesimulator/PusherSwift.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "63b68776a1f592267c73c808cd596dda"

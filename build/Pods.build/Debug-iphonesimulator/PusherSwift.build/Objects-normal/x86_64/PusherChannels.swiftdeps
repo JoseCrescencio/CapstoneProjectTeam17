@@ -1,0 +1,225 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "PusherChannels"
+provides-nominal:
+- "11PusherSwift0A8ChannelsC"
+provides-member:
+- ["11PusherSwift0A8ChannelsC", ""]
+provides-dynamic-lookup:
+- "add"
+- "addPresence"
+- "channels"
+- "find"
+- "findPresence"
+- "remove"
+depends-top-level:
+- "AssignmentPrecedence"
+- "CastingPrecedence"
+- "NSObject"
+- "PusherAuth"
+- "PusherChannel"
+- !private "PusherChannelType"
+- "PusherChannels"
+- "PusherConnection"
+- "PusherPresenceChannel"
+- "PusherPresenceChannelMember"
+- "String"
+depends-member:
+- !private ["Sb", "_getBuiltinLogicValue"]
+- ["s7CVarArgP", "PusherChannel"]
+- !private ["s7CVarArgP", "PusherChannelType"]
+- !private ["s7CVarArgP", "PusherPresenceChannel"]
+- ["s7CVarArgP", "String"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "channels"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "removeValue"]
+- !private ["s7CVarArgP", "subscript"]
+- ["Sl", "init"]
+- !private ["Sl", "removeValue"]
+- !private ["Sl", "subscript"]
+- ["s28CustomDebugStringConvertibleP", "PusherChannel"]
+- !private ["s28CustomDebugStringConvertibleP", "PusherChannelType"]
+- !private ["s28CustomDebugStringConvertibleP", "PusherPresenceChannel"]
+- ["s28CustomDebugStringConvertibleP", "String"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "channels"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "removeValue"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "removeValue"]
+- !private ["s17CustomReflectableP", "subscript"]
+- ["s23CustomStringConvertibleP", "PusherChannel"]
+- !private ["s23CustomStringConvertibleP", "PusherChannelType"]
+- !private ["s23CustomStringConvertibleP", "PusherPresenceChannel"]
+- ["s23CustomStringConvertibleP", "String"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "channels"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "removeValue"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- ["Se", "init"]
+- !private ["Se", "removeValue"]
+- !private ["Se", "subscript"]
+- ["SD", "init"]
+- !private ["SD", "removeValue"]
+- !private ["SD", "subscript"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- ["SE", "init"]
+- !private ["SE", "removeValue"]
+- !private ["SE", "subscript"]
+- ["SQ", "PusherChannel"]
+- !private ["SQ", "PusherChannelType"]
+- !private ["SQ", "PusherPresenceChannel"]
+- ["SQ", "String"]
+- ["SQ", ""]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "channels"]
+- ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "isPresenceChannel"]
+- !private ["SQ", "removeValue"]
+- !private ["SQ", "subscript"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "removeValue"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- ["SH", "PusherChannel"]
+- !private ["SH", "PusherChannelType"]
+- !private ["SH", "PusherPresenceChannel"]
+- ["SH", "String"]
+- ["SH", ""]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "channels"]
+- ["SH", "init"]
+- !private ["SH", "init"]
+- !private ["SH", "isPresenceChannel"]
+- !private ["SH", "removeValue"]
+- !private ["SH", "subscript"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- ["So8NSObjectC", "PusherAuth"]
+- ["So8NSObjectC", "PusherChannel"]
+- !private ["So8NSObjectC", "PusherChannelType"]
+- ["So8NSObjectC", "PusherConnection"]
+- ["So8NSObjectC", "PusherPresenceChannel"]
+- ["So8NSObjectC", "PusherPresenceChannelMember"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", ""]
+- ["So8NSObjectC", "add"]
+- ["So8NSObjectC", "addPresence"]
+- ["So8NSObjectC", "channels"]
+- ["So8NSObjectC", "find"]
+- ["So8NSObjectC", "findPresence"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "remove"]
+- ["So8NSObjectP", "PusherChannel"]
+- !private ["So8NSObjectP", "PusherChannelType"]
+- !private ["So8NSObjectP", "PusherPresenceChannel"]
+- ["So8NSObjectP", "String"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "channels"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "init"]
+- !private ["11PusherSwift0A7ChannelC", "init"]
+- !private ["11PusherSwift0A11ChannelTypeO", "isPresenceChannel"]
+- ["11PusherSwift0A8ChannelsC", "PusherAuth"]
+- ["11PusherSwift0A8ChannelsC", "PusherChannel"]
+- !private ["11PusherSwift0A8ChannelsC", "PusherChannelType"]
+- ["11PusherSwift0A8ChannelsC", "PusherConnection"]
+- ["11PusherSwift0A8ChannelsC", "PusherPresenceChannel"]
+- ["11PusherSwift0A8ChannelsC", "PusherPresenceChannelMember"]
+- ["11PusherSwift0A8ChannelsC", "String"]
+- ["11PusherSwift0A8ChannelsC", "add"]
+- ["11PusherSwift0A8ChannelsC", "addPresence"]
+- ["11PusherSwift0A8ChannelsC", "channels"]
+- ["11PusherSwift0A8ChannelsC", "deinit"]
+- ["11PusherSwift0A8ChannelsC", "find"]
+- ["11PusherSwift0A8ChannelsC", "findPresence"]
+- ["11PusherSwift0A8ChannelsC", "init"]
+- ["11PusherSwift0A8ChannelsC", "remove"]
+- !private ["11PusherSwift0A15PresenceChannelC", "init"]
+- ["ST", "init"]
+- !private ["ST", "removeValue"]
+- !private ["ST", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "removeValue"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "PusherChannel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "PusherChannelType"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "PusherPresenceChannel"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "String"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "channels"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "removeValue"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+depends-nominal:
+- !private "Sb"
+- "s7CVarArgP"
+- "Sl"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "Se"
+- "SD"
+- "SE"
+- "SQ"
+- !private "s27ExpressibleByBooleanLiteralP"
+- "s30ExpressibleByDictionaryLiteralP"
+- "SH"
+- !private "s25LosslessStringConvertibleP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "11PusherSwift0A7ChannelC"
+- !private "11PusherSwift0A11ChannelTypeO"
+- "11PusherSwift0A8ChannelsC"
+- !private "11PusherSwift0A15PresenceChannelC"
+- "ST"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/angel/Desktop/CapstoneProject/Pods/Target Support Files/PusherSwift/PusherSwift-umbrella.h"
+- "/Users/angel/Desktop/CapstoneProject/build/Pods.build/Debug-iphonesimulator/PusherSwift.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "83e557fbd62caceffda384d415e92ec4"
