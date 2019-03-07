@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BCF50F02230760600CC4199 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCF50EF2230760600CC4199 /* HomeViewController.swift */; };
+		0BCF50F22230D08E00CC4199 /* NewPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCF50F12230D08E00CC4199 /* NewPlanViewController.swift */; };
+		0BCF50F42230DE8A00CC4199 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCF50F32230DE8A00CC4199 /* DetailsViewController.swift */; };
+		0BCF50F62230E4E300CC4199 /* FloorPlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCF50F52230E4E300CC4199 /* FloorPlanCell.swift */; };
+		0BCF50F82230E81600CC4199 /* PlanEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCF50F72230E81600CC4199 /* PlanEditorViewController.swift */; };
 		7A63E976221C9CD100341E76 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A63E975221C9CD100341E76 /* Box.swift */; };
 		7AD66ABD221B1840003FD0BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD66ABC221B1840003FD0BD /* AppDelegate.swift */; };
 		7AD66ABF221B1840003FD0BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD66ABE221B1840003FD0BD /* ViewController.swift */; };
@@ -39,6 +44,11 @@
 
 /* Begin PBXFileReference section */
 		0155E656CEEF75C864029D46 /* Pods-MeasureARPusherUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeasureARPusherUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeasureARPusherUITests/Pods-MeasureARPusherUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		0BCF50EF2230760600CC4199 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0BCF50F12230D08E00CC4199 /* NewPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlanViewController.swift; sourceTree = "<group>"; };
+		0BCF50F32230DE8A00CC4199 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		0BCF50F52230E4E300CC4199 /* FloorPlanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorPlanCell.swift; sourceTree = "<group>"; };
+		0BCF50F72230E81600CC4199 /* PlanEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanEditorViewController.swift; sourceTree = "<group>"; };
 		0ECBBEE647F6B8B39760DEBF /* Pods_MeasureARPusher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeasureARPusher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		164510081F8C7A5F61088BF7 /* Pods_MeasureARPusherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeasureARPusherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		192C9315F64A3CD5F1074B3B /* Pods-MeasureARPusher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeasureARPusher.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeasureARPusher/Pods-MeasureARPusher.release.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +143,11 @@
 				7AD66AC5221B1841003FD0BD /* LaunchScreen.storyboard */,
 				7AD66AC8221B1841003FD0BD /* Info.plist */,
 				7A63E975221C9CD100341E76 /* Box.swift */,
+				0BCF50EF2230760600CC4199 /* HomeViewController.swift */,
+				0BCF50F12230D08E00CC4199 /* NewPlanViewController.swift */,
+				0BCF50F32230DE8A00CC4199 /* DetailsViewController.swift */,
+				0BCF50F52230E4E300CC4199 /* FloorPlanCell.swift */,
+				0BCF50F72230E81600CC4199 /* PlanEditorViewController.swift */,
 			);
 			path = MeasureARPusher;
 			sourceTree = "<group>";
@@ -394,9 +409,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BCF50F62230E4E300CC4199 /* FloorPlanCell.swift in Sources */,
+				0BCF50F22230D08E00CC4199 /* NewPlanViewController.swift in Sources */,
+				0BCF50F82230E81600CC4199 /* PlanEditorViewController.swift in Sources */,
 				7A63E976221C9CD100341E76 /* Box.swift in Sources */,
 				7AD66ABF221B1840003FD0BD /* ViewController.swift in Sources */,
 				7AD66ABD221B1840003FD0BD /* AppDelegate.swift in Sources */,
+				0BCF50F02230760600CC4199 /* HomeViewController.swift in Sources */,
+				0BCF50F42230DE8A00CC4199 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,7 +593,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WLTLVDJ994;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MeasureARPusher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -592,7 +612,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WLTLVDJ994;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MeasureARPusher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
