@@ -1,0 +1,60 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/angel/Desktop/CapstoneProject/build/Debug-iphonesimulator/Pods_MeasureARPusher.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Pods-MeasureARPusher-umbrella.h",
+          'external-contents': "/Users/angel/Desktop/CapstoneProject/Pods/Target Support Files/Pods-MeasureARPusher/Pods-MeasureARPusher-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "Pods_MeasureARPusher-Swift.h",
+          'external-contents': "/Users/angel/Desktop/CapstoneProject/build/Debug-iphonesimulator/Pods_MeasureARPusher.framework/Headers/Pods_MeasureARPusher-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/angel/Desktop/CapstoneProject/build/Debug-iphonesimulator/Pods_MeasureARPusher.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/angel/Desktop/CapstoneProject/build/Pods.build/Debug-iphonesimulator/Pods-MeasureARPusher.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/angel/Desktop/CapstoneProject/build/Debug-iphonesimulator/PusherSwift/PusherSwift.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "PusherSwift-Swift.h",
+          'external-contents': "/Users/angel/Desktop/CapstoneProject/build/Debug-iphonesimulator/PusherSwift/PusherSwift.framework/Headers/PusherSwift-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "PusherSwift-umbrella.h",
+          'external-contents': "/Users/angel/Desktop/CapstoneProject/Pods/Target Support Files/PusherSwift/PusherSwift-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/angel/Desktop/CapstoneProject/build/Debug-iphonesimulator/PusherSwift/PusherSwift.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/angel/Desktop/CapstoneProject/build/Pods.build/Debug-iphonesimulator/PusherSwift.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}
