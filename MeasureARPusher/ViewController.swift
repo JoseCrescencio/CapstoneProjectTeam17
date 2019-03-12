@@ -42,6 +42,7 @@ extension Float {
 
 class ViewController: UIViewController, ARSCNViewDelegate {
 
+    var objs: [SCNNode] = []
     var startPoint: SCNVector3!
     var endPoint: SCNVector3!
     var numberOfTaps = 0
@@ -68,6 +69,26 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var statusTextView: UITextView!
+    
+    @IBAction func onUndo(_ sender: Any) {
+        if objs.count == 1 {
+            objs.last?.removeFromParentNode()
+            objs.removeLast()
+            numberOfTaps = 0
+        } else {
+            for i in 1...3 {
+                objs.last?.removeFromParentNode()
+                objs.removeLast()
+            }
+            if objs.count == 1 {
+                startPoint = objs.last?.position
+            } else {
+                startPoint = objs[objs.count-3].position
+            }
+        }
+    }
+    
+    
     @IBAction func didTapScreen(_ sender: UITapGestureRecognizer) {
         
         numberOfTaps += 1
@@ -113,6 +134,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         markerNode.position = SCNVector3(hitTestResult.worldTransform.columns.3.x, hitTestResult.worldTransform.columns.3.y, hitTestResult.worldTransform.columns.3.z)
         
         sceneView.scene.rootNode.addChildNode(markerNode)
+        objs.append(markerNode)
     }
     
     override func viewDidLoad() {
@@ -209,6 +231,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let lineNode = SCNNode(geometry: lineGeometry)
         
         sceneView.scene.rootNode.addChildNode(lineNode)
+        objs.append(lineNode)
     }
     
     func addDistanceText(distance: Float, at point: SCNVector3) {
@@ -221,6 +244,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         textNode.scale = SCNVector3Make(0.005, 0.005, 0.005)
         
         sceneView.scene.rootNode.addChildNode(textNode)
+        objs.append(textNode)
     }
 }
 
