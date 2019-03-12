@@ -9,7 +9,6 @@
 import UIKit
 import SceneKit
 import ARKit
-import PusherSwift
 
 extension SCNGeometry {
     class func lineFrom(vector vector1: SCNVector3, toVector vector2: SCNVector3) -> SCNGeometry {
@@ -43,28 +42,54 @@ extension Float {
 
 class ViewController: UIViewController, ARSCNViewDelegate {
 
+    var objs: [SCNNode] = []
     var startPoint: SCNVector3!
     var endPoint: SCNVector3!
     var numberOfTaps = 0
     var point: SCNVector3!
+    var sendingTime : TimeInterval = 0
+    var status: String!
+    var trackingState: ARCamera.TrackingState!
     
-    @IBOutlet weak var sceneView: ARSCNView!
-    
-    @IBOutlet weak var statusTextView: UITextView!
-    
-    @IBAction func switchChanged(_ sender: UISwitch) {
-        
-        if sender.isOn {
-            mode = .measuring
-        } else {
-            mode = .waitingForMeasuring
-            sendPusherEvent()
-        }
-        
+    enum Mode {
+        case waitingForMeasuring
+        case measuring
     }
     
+    var mode: Mode = .waitingForMeasuring {
+        didSet {
+            switch mode {
+            case .waitingForMeasuring:
+                status = "NOT READY"
+            case .measuring:
+                setStatusText()
+            }
+        }
+    }
+    
+    @IBOutlet weak var sceneView: ARSCNView!
+    @IBOutlet weak var statusTextView: UITextView!
+    
+    @IBAction func onUndo(_ sender: Any) {
+        if objs.count == 1 {
+            objs.last?.removeFromParentNode()
+            objs.removeLast()
+            numberOfTaps = 0
+        } else {
+            for i in 1...3 {
+                objs.last?.removeFromParentNode()
+                objs.removeLast()
+            }
+            if objs.count == 1 {
+                startPoint = objs.last?.position
+            } else {
+                startPoint = objs[objs.count-3].position
+            }
+        }
+    }
+    
+    
     @IBAction func didTapScreen(_ sender: UITapGestureRecognizer) {
-        print("Tap")
         
         numberOfTaps += 1
         
@@ -84,9 +109,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             addRedMarker(hitTestResult: hitTest)
         }
         else {
-            // After 2nd tap, reset taps to 0
-            //numberOfTaps = 0
             endPoint = SCNVector3(hitTest.worldTransform.columns.3.x, hitTest.worldTransform.columns.3.y, hitTest.worldTransform.columns.3.z)
+            
             addRedMarker(hitTestResult: hitTest)
             
             addLineBetween(start: startPoint, end: endPoint)
@@ -110,43 +134,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         markerNode.position = SCNVector3(hitTestResult.worldTransform.columns.3.x, hitTestResult.worldTransform.columns.3.y, hitTestResult.worldTransform.columns.3.z)
         
         sceneView.scene.rootNode.addChildNode(markerNode)
-    }
-    
-    let pusher = Pusher(
-        key: "24ed8b37776c111ac984",
-        options: PusherClientOptions(
-            authMethod: .inline(secret: "05af2d7ae20cbff45aae"),
-            host: .cluster("us2")
-        )
-    )
-    var channel: PusherChannel!
-    var sendingTime : TimeInterval = 0
-    
-    var box: Box!
-    var status: String!
-    var startPosition: SCNVector3!
-    var distance: Float!
-    var trackingState: ARCamera.TrackingState!
-    
-    enum Mode {
-        case waitingForMeasuring
-        case measuring
-    }
-    
-    var mode: Mode = .waitingForMeasuring {
-        didSet {
-            switch mode {
-            case .waitingForMeasuring:
-                status = "NOT READY"
-            case .measuring:
-                box.update(
-                    minExtents: SCNVector3Zero, maxExtents: SCNVector3Zero)
-                box.isHidden = false
-                startPosition = nil
-                distance = 0.0
-                setStatusText()
-            }
-        }
+        objs.append(markerNode)
     }
     
     override func viewDidLoad() {
@@ -156,29 +144,15 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Set a padding in the text view
         statusTextView.textContainerInset =
             UIEdgeInsets(top: 20.0, left: 10.0, bottom: 10.0, right: 0.0)
-        // Instantiate the box and add it to the scene
-        box = Box()
-        box.isHidden = true;
-        sceneView.scene.rootNode.addChildNode(box)
         // Set the initial mode
         mode = .waitingForMeasuring
-        // Set the initial distance
-        distance = 0.0
         // Display the initial status
         setStatusText()
-        
-        // subscribe to channel and connect
-        channel = pusher.subscribe("private-channel")
-        pusher.connect()
     }
-    
-    
-    
     
     func setStatusText() {
         var text = "Status: \(status!)\n"
         text += "Tracking: \(getTrackigDescription())\n"
-        text += "Distance: \(String(format:"%.2f cm", distance! * 100.0))"
         statusTextView.text = text
     }
     
@@ -245,24 +219,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             
             if mode == .measuring {
                 status = "MEASURING"
-                let worldPosition = SCNVector3Make(result.worldTransform.columns.3.x, result.worldTransform.columns.3.y, result.worldTransform.columns.3.z)
-                
-                if startPosition == nil {
-                    startPosition = worldPosition
-                    box.position = worldPosition
-                }
-                
-                distance = calculateDistance(from: startPosition!, to: worldPosition)
-                box.resizeTo(extent: distance)
-                
-                let angleInRadians = calculateAngleInRadians(from: startPosition!, to: worldPosition)
-                box.rotation = SCNVector4(x: 0, y: 1, z: 0, w: -(angleInRadians + Float.pi))
-                
-                // Only send the Pusher event after the specified interval
-                if time > sendingTime {
-                    sendPusherEvent();
-                    sendingTime = time + TimeInterval(0.2)
-                }
             }
         } else {
             status = "NOT READY"
@@ -270,30 +226,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         setStatusText()
     }
     
-    
-    func calculateDistance(from: SCNVector3, to: SCNVector3) -> Float {
-        let x = from.x - to.x
-        let y = from.y - to.y
-        let z = from.z - to.z
-        return sqrtf( (x * x) + (y * y) + (z * z))
-    }
-    
-    func calculateAngleInRadians(from: SCNVector3, to: SCNVector3) -> Float {
-        let x = from.x - to.x
-        let z = from.z - to.z
-        return atan2(z, x)
-    }
-    
-    func sendPusherEvent() {
-        channel.trigger(eventName: "client-new-measurement", data: String(format: "%.2f cm", distance * 100.0))
-    }
-    
     func addLineBetween(start: SCNVector3, end: SCNVector3) {
-        print("Here")
         let lineGeometry = SCNGeometry.lineFrom(vector: start, toVector: end)
         let lineNode = SCNNode(geometry: lineGeometry)
         
         sceneView.scene.rootNode.addChildNode(lineNode)
+        objs.append(lineNode)
     }
     
     func addDistanceText(distance: Float, at point: SCNVector3) {
@@ -306,6 +244,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         textNode.scale = SCNVector3Make(0.005, 0.005, 0.005)
         
         sceneView.scene.rootNode.addChildNode(textNode)
+        objs.append(textNode)
     }
 }
 
