@@ -70,6 +70,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var statusTextView: UITextView!
     
+    @IBAction func onRestart(_ sender: Any) {
+        sceneView.scene.rootNode.enumerateChildNodes { (node, _) in
+            node.removeFromParentNode()
+        }
+        objs.removeAll()
+        numberOfTaps = 0
+    }
+    
     @IBAction func onUndo(_ sender: Any) {
         if objs.count == 1 {
             objs.last?.removeFromParentNode()
