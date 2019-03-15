@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="54Y-me-nBG">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,21 +19,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UzK-eu-FpS">
-                                <rect key="frame" x="152" y="318" width="71" height="30"/>
+                                <rect key="frame" x="132" y="617" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Room"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="iaF-dP-G7D"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q7h-XV-V5p">
+                                <rect key="frame" x="109" y="247" width="136" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Add">
+                                            <attributes>
+                                                <font key="NSFont" metaFont="system" size="18"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="addRoom:" destination="54Y-me-nBG" eventType="touchUpInside" id="saY-wt-E71"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RLZ-L6-r0M">
+                                <rect key="frame" x="132" y="234" width="93" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="19u-ia-AC0"/>
                     </view>
+                    <connections>
+                        <outlet property="addR" destination="Q7h-XV-V5p" id="IPA-SD-6Vl"/>
+                        <outlet property="roomIm" destination="RLZ-L6-r0M" id="jDA-9p-dKa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NZB-5n-0hj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2146" y="-1226"/>
+            <point key="canvasLocation" x="2144.8000000000002" y="-1226.5367316341831"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

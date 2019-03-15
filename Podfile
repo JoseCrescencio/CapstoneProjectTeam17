@@ -17,6 +17,7 @@ target 'MeasureARPusher' do
     # Pods for testing
   end
 
-  pod 'PusherSwift', :git => 'https://github.com/pusher/pusher-websocket-swift.git', :branch => 'swift-3.2'
+
+  pod 'CollectionKit'
 
 end

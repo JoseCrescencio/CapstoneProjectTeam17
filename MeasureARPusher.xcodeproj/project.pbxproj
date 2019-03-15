@@ -322,18 +322,18 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MeasureARPusher/Pods-MeasureARPusher-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/PusherSwift/PusherSwift.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-MeasureARPusher/Pods-MeasureARPusher-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CollectionKit/CollectionKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PusherSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CollectionKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeasureARPusher/Pods-MeasureARPusher-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MeasureARPusher/Pods-MeasureARPusher-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D2E65AE4787EC1A7D91283D8 /* [CP] Check Pods Manifest.lock */ = {

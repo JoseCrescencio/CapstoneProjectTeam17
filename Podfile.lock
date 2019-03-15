@@ -1,22 +1,18 @@
 PODS:
-  - PusherSwift (4.2.1)
+  - CollectionKit (2.3.0):
+    - CollectionKit/Core (= 2.3.0)
+  - CollectionKit/Core (2.3.0)
 
 DEPENDENCIES:
-  - PusherSwift (from `https://github.com/pusher/pusher-websocket-swift.git`, branch `swift-3.2`)
+  - CollectionKit
 
-EXTERNAL SOURCES:
-  PusherSwift:
-    :branch: swift-3.2
-    :git: https://github.com/pusher/pusher-websocket-swift.git
-
-CHECKOUT OPTIONS:
-  PusherSwift:
-    :commit: f89207931401652c39b1201da187f8274329c9ab
-    :git: https://github.com/pusher/pusher-websocket-swift.git
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CollectionKit
 
 SPEC CHECKSUMS:
-  PusherSwift: 0f0dddcca01e99d16da22bb995e820f5b274a483
+  CollectionKit: 6910479bf865bfe49040e73322ce4b8fe8991231
 
-PODFILE CHECKSUM: 4a5bf595626d10d76a6f123eba30f3a756382423
+PODFILE CHECKSUM: 3dd0624659e542315ba32c3c65ae013abc6d601c
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

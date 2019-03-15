@@ -7,9 +7,28 @@
 //
 
 import UIKit
+import CollectionKit
 
-class PlanEditorViewController: UIViewController {
 
+class PlanEditorViewController: UIViewController{
+
+    
+    @IBOutlet weak var addR: UIButton!
+
+    @IBOutlet weak var roomIm: UIImageView!
+    @IBAction func addRoom(_ sender: Any) {
+        addR.isEnabled = false
+        if (!addR.isEnabled){
+            print("DISABLED")
+            addR.isHidden = true
+        }
+        addR.setTitle("my text here", for: .disabled)
+        roomIm.image = UIImage(named: "floorplan")
+        print("yourButton was pressed")
+
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,6 +36,9 @@ class PlanEditorViewController: UIViewController {
     }
     
 
+
+        
+    }
     /*
     // MARK: - Navigation
 
@@ -26,5 +48,6 @@ class PlanEditorViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+ 
 
-}
