@@ -68,8 +68,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     @IBOutlet weak var sceneView: ARSCNView!
-    @IBOutlet weak var statusTextView: UITextView!
+//    @IBOutlet weak var statusTextView: UITextView!
+    @IBOutlet weak var statusText: UITextView!
     
+    @IBAction func onDone(_ sender: Any) {
+        self.performSegue(withIdentifier: "scanDone", sender: self)
+    }
     @IBAction func onRestart(_ sender: Any) {
         sceneView.scene.rootNode.enumerateChildNodes { (node, _) in
             node.removeFromParentNode()
@@ -98,36 +102,36 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     
     @IBAction func didTapScreen(_ sender: UITapGestureRecognizer) {
-        
-        numberOfTaps += 1
-        
-        // Get 2D position of touch event on screen
-        let touchPosition = sender.location(in: sceneView)
-        
-        // Translate those 2D points to 3D points using hitTest (existing plane)
-        let hitTestResults = sceneView.hitTest(touchPosition, types: .existingPlane)
-        
-        guard let hitTest = hitTestResults.first else {
-            return
+        if (status == "READY") {
+            numberOfTaps += 1
+            
+            // Get 2D position of touch event on screen
+            let touchPosition = sender.location(in: sceneView)
+            
+            // Translate those 2D points to 3D points using hitTest (existing plane)
+            let hitTestResults = sceneView.hitTest(touchPosition, types: .existingPlane)
+            
+            guard let hitTest = hitTestResults.first else {
+                return
+            }
+            
+            // If first tap, add red marker. If second tap, add green marker and reset to 0
+            if numberOfTaps == 1 {
+                startPoint = SCNVector3(hitTest.worldTransform.columns.3.x, hitTest.worldTransform.columns.3.y, hitTest.worldTransform.columns.3.z)
+                addRedMarker(hitTestResult: hitTest)
+            }
+            else {
+                endPoint = SCNVector3(hitTest.worldTransform.columns.3.x, hitTest.worldTransform.columns.3.y, hitTest.worldTransform.columns.3.z)
+                
+                addRedMarker(hitTestResult: hitTest)
+                
+                addLineBetween(start: startPoint, end: endPoint)
+                
+                addDistanceText(distance: SCNVector3.distanceFrom(vector: startPoint, toVector: endPoint), at: endPoint)
+                
+                startPoint = endPoint
+            }
         }
-        
-        // If first tap, add red marker. If second tap, add green marker and reset to 0
-        if numberOfTaps == 1 {
-            startPoint = SCNVector3(hitTest.worldTransform.columns.3.x, hitTest.worldTransform.columns.3.y, hitTest.worldTransform.columns.3.z)
-            addRedMarker(hitTestResult: hitTest)
-        }
-        else {
-            endPoint = SCNVector3(hitTest.worldTransform.columns.3.x, hitTest.worldTransform.columns.3.y, hitTest.worldTransform.columns.3.z)
-            
-            addRedMarker(hitTestResult: hitTest)
-            
-            addLineBetween(start: startPoint, end: endPoint)
-            
-            addDistanceText(distance: SCNVector3.distanceFrom(vector: startPoint, toVector: endPoint), at: endPoint)
-            
-            startPoint = endPoint
-        }
-        
     }
     
     func addRedMarker(hitTestResult: ARHitTestResult) {
@@ -150,8 +154,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Set the view's delegate
         sceneView.delegate = self
         // Set a padding in the text view
-        statusTextView.textContainerInset =
-            UIEdgeInsets(top: 20.0, left: 10.0, bottom: 10.0, right: 0.0)
+//        statusTextView.textContainerInset =
+//            UIEdgeInsets(top: 20.0, left: 10.0, bottom: 10.0, right: 0.0)
         // Set the initial mode
         mode = .waitingForMeasuring
         // Display the initial status
@@ -159,9 +163,17 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     func setStatusText() {
-        var text = "Status: \(status!)\n"
-        text += "Tracking: \(getTrackigDescription())\n"
-        statusTextView.text = text
+//        var text = "Status: \(status!)\n"
+//        text += "Tracking: \(getTrackigDescription())\n"
+//        statusTextView.text = text
+//
+        var txt = "Status: \(status!)!\n Find a horizontal plane to start scan\n"
+        if status == "READY" {
+            txt = "Status: \(status!)!\n Begin placing markers on screen.\n"
+        }
+        txt += "Tracking: \(getTrackigDescription())\n"
+        statusText.text = txt
+        
     }
     
     func getTrackigDescription() -> String {
@@ -169,17 +181,17 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         if let t = trackingState {
             switch(t) {
             case .notAvailable:
-                description = "TRACKING UNAVAILABLE"
+                description = "UNAVAILABLE"
             case .normal:
-                description = "TRACKING NORMAL"
+                description = "NORMAL"
             case .limited(let reason):
                 switch reason {
                 case .excessiveMotion:
                     description =
-                    "TRACKING LIMITED - Too much camera movement"
+                    "LIMITED - Too much camera movement"
                 case .insufficientFeatures:
                     description =
-                    "TRACKING LIMITED - Not enough surface detail"
+                    "LIMITED - Not enough surface detail"
                 case .initializing:
                     description = "INITIALIZING"
                 case .relocalizing:
@@ -228,9 +240,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             if mode == .measuring {
                 status = "MEASURING"
             }
-        } else {
+        } /*else {
             status = "NOT READY"
-        }
+        }*/
         setStatusText()
     }
     
