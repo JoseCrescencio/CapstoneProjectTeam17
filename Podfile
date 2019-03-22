@@ -6,6 +6,8 @@ target 'MeasureARPusher' do
   use_frameworks!
 
   # Pods for MeasureARPusher
+  pod "Parse"
+  pod "AlamofireImage"
 
   target 'MeasureARPusherTests' do
     inherit! :search_paths
@@ -17,6 +19,6 @@ target 'MeasureARPusher' do
     # Pods for testing
   end
 
-  pod 'PusherSwift', :git => 'https://github.com/pusher/pusher-websocket-swift.git', :branch => 'swift-3.2'
+  pod 'PusherSwift', :git => 'https://github.com/pusher/pusher-websocket-swift.git', :branch => 'swift-4'
 
 end

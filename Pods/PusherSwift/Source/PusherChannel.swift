@@ -12,7 +12,7 @@ public enum PusherChannelType {
     case normal
 
     public init(name: String) {
-        self = type(of: self).type(forName: name)
+        self = .type(of: self).type(name)
     }
 
     public static func type(forName name: String) -> PusherChannelType {

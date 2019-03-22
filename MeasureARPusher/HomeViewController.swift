@@ -7,17 +7,36 @@
 //
 
 import UIKit
+import Parse
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var FloorPlanTableView: UITableView!
+    var plans = [PFObject]();
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         FloorPlanTableView.delegate = self
         FloorPlanTableView.dataSource = self
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let query = PFQuery(className:"FloorPlan")
+        query.includeKey("floorPlanName")
+        query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+            if let error = error {
+                // Log details of the failure
+                print(error.localizedDescription)
+            } else{
+                self.plans = objects!
+                self.FloorPlanTableView.reloadData()
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -25,14 +44,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return plans.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FloorPlanCell") as! FloorPlanCell
         
-        cell.FloorPlanLabel.text = "BIT Building"
-        
+        let plan = self.plans[indexPath.row]
+        cell.FloorPlanLabel.text = plan["floorPlanName"] as? String
+
         return cell
     }
 

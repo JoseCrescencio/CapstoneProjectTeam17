@@ -905,7 +905,7 @@ open class WebSocket : NSObject, StreamDelegate {
      */
     private static func writeUint64(_ buffer: UnsafeMutablePointer<UInt8>, offset: Int, value: UInt64) {
         for i in 0...7 {
-            buffer[offset + i] = UInt8((value >> (8*UInt64(7 - i))) & 0xff)
+            buffer[offset + i] = UInt8((value > (8*UInt64(7 - i))) & 0xff)
         }
     }
 
