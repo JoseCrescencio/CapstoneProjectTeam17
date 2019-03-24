@@ -6,6 +6,8 @@ target 'MeasureARPusher' do
   use_frameworks!
 
   # Pods for MeasureARPusher
+  pod "Parse"
+  pod "Alamofire"
 
   target 'MeasureARPusherTests' do
     inherit! :search_paths
