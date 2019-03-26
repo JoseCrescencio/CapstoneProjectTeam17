@@ -7,31 +7,34 @@
 //
 
 import UIKit
-import CollectionKit
+//import CollectionKit
 
 
 class PlanEditorViewController: UIViewController{
+   
 
     
-    @IBOutlet weak var addR: UIButton!
+    @IBOutlet weak var addButton: UIButton! //button that is NOT in the collection View
+    @IBOutlet weak var roomImage: UIImageView! //Img that is NOT in the collection view
+    
+   
+    
 
-    @IBOutlet weak var roomIm: UIImageView!
-    @IBAction func addRoom(_ sender: Any) {
-        addR.isEnabled = false
-        if (!addR.isEnabled){
+    
+    //Function NOT in the collection view to change button into img //
+    @IBAction func pressedButton(_ sender: Any) {
+        addButton.isEnabled = false
+        if (!addButton.isEnabled){
             print("DISABLED")
-            addR.isHidden = true
+            addButton.isHidden = true
         }
-        addR.setTitle("my text here", for: .disabled)
-        roomIm.image = UIImage(named: "floorplan")
+        addButton.setTitle("my text here", for: .disabled)
+        roomImage.image = UIImage(named: "floorplan")
         print("yourButton was pressed")
-
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
