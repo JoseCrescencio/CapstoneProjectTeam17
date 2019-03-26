@@ -1,18 +1,32 @@
 PODS:
+  - Alamofire (4.8.1)
+  - Bolts/Tasks (1.9.0)
   - CollectionKit (2.3.0):
     - CollectionKit/Core (= 2.3.0)
   - CollectionKit/Core (2.3.0)
+  - Parse (1.17.2):
+    - Parse/Core (= 1.17.2)
+  - Parse/Core (1.17.2):
+    - Bolts/Tasks (~> 1.9)
 
 DEPENDENCIES:
+  - Alamofire
   - CollectionKit
+  - Parse
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Bolts
     - CollectionKit
+    - Parse
 
 SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   CollectionKit: 6910479bf865bfe49040e73322ce4b8fe8991231
+  Parse: 3b31a3dd1777b07ee7f0caee32fafbff544483a5
 
-PODFILE CHECKSUM: 3dd0624659e542315ba32c3c65ae013abc6d601c
+PODFILE CHECKSUM: b489041b46ada410acdde63a170338f34bdd4f92
 
 COCOAPODS: 1.6.1
