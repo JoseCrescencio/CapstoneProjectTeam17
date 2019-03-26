@@ -265,6 +265,9 @@
                                 <state key="normal" title="  Start Floor Plan  ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="54Y-me-nBG" kind="presentation" id="6pR-wU-cUU"/>
+                                </connections>
                             </button>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="JtP-Ti-2h2">
                                 <rect key="frame" x="302" y="231" width="94" height="29"/>
@@ -453,6 +456,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aTr-Uc-Mz2"/>
+        <segue reference="6pR-wU-cUU"/>
     </inferredMetricsTieBreakers>
 </document>
