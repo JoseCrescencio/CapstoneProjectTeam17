@@ -12,6 +12,7 @@
 		0BCF50F42230DE8A00CC4199 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCF50F32230DE8A00CC4199 /* DetailsViewController.swift */; };
 		0BCF50F62230E4E300CC4199 /* FloorPlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCF50F52230E4E300CC4199 /* FloorPlanCell.swift */; };
 		0BCF50F82230E81600CC4199 /* PlanEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCF50F72230E81600CC4199 /* PlanEditorViewController.swift */; };
+		5B63D5C622540B99002A11CE /* EditorPlansCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63D5C522540B99002A11CE /* EditorPlansCollectionViewController.swift */; };
 		7A63E976221C9CD100341E76 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A63E975221C9CD100341E76 /* Box.swift */; };
 		7AD66ABD221B1840003FD0BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD66ABC221B1840003FD0BD /* AppDelegate.swift */; };
 		7AD66ABF221B1840003FD0BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD66ABE221B1840003FD0BD /* ViewController.swift */; };
@@ -53,6 +54,7 @@
 		164510081F8C7A5F61088BF7 /* Pods_MeasureARPusherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeasureARPusherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		192C9315F64A3CD5F1074B3B /* Pods-MeasureARPusher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeasureARPusher.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeasureARPusher/Pods-MeasureARPusher.release.xcconfig"; sourceTree = "<group>"; };
 		4B611E3E14E0C6108987DA8C /* Pods-MeasureARPusher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeasureARPusher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeasureARPusher/Pods-MeasureARPusher.debug.xcconfig"; sourceTree = "<group>"; };
+		5B63D5C522540B99002A11CE /* EditorPlansCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorPlansCollectionViewController.swift; sourceTree = "<group>"; };
 		7A63E975221C9CD100341E76 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		7AD66AB9221B1840003FD0BD /* MeasureARPusher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeasureARPusher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD66ABC221B1840003FD0BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				7AD66ABC221B1840003FD0BD /* AppDelegate.swift */,
 				7AD66ABE221B1840003FD0BD /* ViewController.swift */,
 				7AD66AC0221B1840003FD0BD /* Main.storyboard */,
+				5B63D5C522540B99002A11CE /* EditorPlansCollectionViewController.swift */,
 				7AD66AC3221B1841003FD0BD /* Assets.xcassets */,
 				7AD66AC5221B1841003FD0BD /* LaunchScreen.storyboard */,
 				7AD66AC8221B1841003FD0BD /* Info.plist */,
@@ -421,6 +424,7 @@
 				7A63E976221C9CD100341E76 /* Box.swift in Sources */,
 				7AD66ABF221B1840003FD0BD /* ViewController.swift in Sources */,
 				7AD66ABD221B1840003FD0BD /* AppDelegate.swift in Sources */,
+				5B63D5C622540B99002A11CE /* EditorPlansCollectionViewController.swift in Sources */,
 				0BCF50F02230760600CC4199 /* HomeViewController.swift in Sources */,
 				0BCF50F42230DE8A00CC4199 /* DetailsViewController.swift in Sources */,
 			);
@@ -600,13 +604,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T7L2FQY8CD;
+				DEVELOPMENT_TEAM = 5M3LCQ9CJ7;
 				INFOPLIST_FILE = MeasureARPusher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = MeasureApplication;
+				PRODUCT_BUNDLE_IDENTIFIER = aMeasureApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
@@ -621,13 +625,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T7L2FQY8CD;
+				DEVELOPMENT_TEAM = 5M3LCQ9CJ7;
 				INFOPLIST_FILE = MeasureARPusher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = MeasureApplication;
+				PRODUCT_BUNDLE_IDENTIFIER = aMeasureApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
