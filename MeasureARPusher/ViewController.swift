@@ -43,7 +43,6 @@ extension Float {
 class ViewController: UIViewController, ARSCNViewDelegate {
 
     var objs: [SCNNode] = []
-    var distances: [Float] = []
     var startPoint: SCNVector3!
     var endPoint: SCNVector3!
     var numberOfTaps = 0
@@ -51,7 +50,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     var sendingTime : TimeInterval = 0
     var status: String!
     var trackingState: ARCamera.TrackingState!
-
+    
     enum Mode {
         case waitingForMeasuring
         case measuring
@@ -80,7 +79,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             node.removeFromParentNode()
         }
         objs.removeAll()
-        distances.removeAll() 
         numberOfTaps = 0
     }
     
@@ -127,16 +125,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 
                 addRedMarker(hitTestResult: hitTest)
                 
-                
-                
                 addLineBetween(start: startPoint, end: endPoint)
-                
-                let distance = SCNVector3.distanceFrom(vector: startPoint, toVector: endPoint)
-                let dist = distance.metersToInches()
-                print("2dist")
-                print(dist)
-                distances.append(distance.metersToInches())
-                print(distances)
                 
                 addDistanceText(distance: SCNVector3.distanceFrom(vector: startPoint, toVector: endPoint), at: endPoint)
                 
@@ -263,12 +252,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         sceneView.scene.rootNode.addChildNode(lineNode)
         objs.append(lineNode)
-        
     }
     
     func addDistanceText(distance: Float, at point: SCNVector3) {
         let textGeometry = SCNText(string: String(format: "%.1f\"", distance.metersToInches()), extrusionDepth: 1)
-        
         textGeometry.font = UIFont.systemFont(ofSize: 10)
         textGeometry.firstMaterial?.diffuse.contents = UIColor.black
         

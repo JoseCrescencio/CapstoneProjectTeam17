@@ -15,7 +15,7 @@ class NewPlanViewController: UIViewController {
     @IBOutlet weak var floorPlanName: UITextField!
     @IBOutlet weak var customerName: UITextField!
     @IBOutlet weak var customerID: UITextField!
-    @IBOutlet weak var additionalInfo: UITextView!
+    @IBOutlet weak var additionalInfo: UITextField!
     
     //Labels
     @IBOutlet weak var levelCount: UILabel!
@@ -36,7 +36,7 @@ class NewPlanViewController: UIViewController {
         floorPlanName.delegate = self as? UITextFieldDelegate
         customerName.delegate = self as? UITextFieldDelegate
         customerID.delegate = self as? UITextFieldDelegate
-        additionalInfo.delegate = self as? UITextFieldDelegate as? UITextViewDelegate
+        additionalInfo.delegate = self as? UITextFieldDelegate
         // Do any additional setup after loading the view.
     }
     //Getting level count
@@ -58,8 +58,8 @@ class NewPlanViewController: UIViewController {
         floorPlan["floorPlanName"] = floorPlanName.text
         floorPlan["customerName"] = customerName.text
         floorPlan["customerID"] = customerID.text
-        floorPlan["levelCount"] = levelCount.text!
-        floorPlan["roomCount"] = roomCount.text!
+        floorPlan["levelCount"] = Int(levelCount.text!)
+        floorPlan["roomCount"] = Int(roomCount.text!)
         floorPlan["additionalInfo"] = additionalInfo.text
         floorPlan.saveInBackground {
             (success: Bool, error: Error?) in
@@ -80,6 +80,15 @@ class NewPlanViewController: UIViewController {
         customerID.resignFirstResponder()
         additionalInfo.resignFirstResponder()
     }
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
     
 }
 

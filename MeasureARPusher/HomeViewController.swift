@@ -25,7 +25,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        //Getting array of objects
+        
         let query = PFQuery(className:"FloorPlan")
         print(query)
         query.includeKey("floorPlanName")
@@ -40,17 +40,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        //Sending out selected cell information. 
-        if let destination = segue.destination as? DetailsViewController{
-            destination.details = [plans[( FloorPlanTableView.indexPathForSelectedRow?.row)!]]
-            FloorPlanTableView.deselectRow(at: FloorPlanTableView.indexPathForSelectedRow!, animated: true)
-        }
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //tableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: "showDetails", sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,7 +50,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FloorPlanCell") as! FloorPlanCell
-        //Displaying floor plan names
+        
         let plan = self.plans[indexPath.row]
         cell.FloorPlanLabel.text = plan["floorPlanName"] as? String
         
