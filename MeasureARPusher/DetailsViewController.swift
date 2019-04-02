@@ -7,29 +7,24 @@
 //
 
 import UIKit
-import Parse
 
 class DetailsViewController: UIViewController {
-    var details = [PFObject]();//Will pass information to this variable
-    @IBOutlet weak var planNameLabel: UILabel!
-    @IBOutlet weak var customerNameLabel: UILabel!
-    @IBOutlet weak var customerIDLabel: UILabel!
-    @IBOutlet weak var levelCountLabel: UILabel!
-    @IBOutlet weak var roomCountLabel: UILabel!
-    @IBOutlet weak var addInfoView: UITextView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        let plan = self.details[0]
-        planNameLabel.text = plan["floorPlanName"] as? String
-        customerNameLabel.text = plan["customerName"] as? String
-        customerIDLabel.text = plan["customerID"] as? String
-        levelCountLabel.text = plan["levelCount"] as? String
-        roomCountLabel.text = plan["roomCount"] as? String
-        addInfoView.text = plan["additionalInfo"] as? String
+
         // Do any additional setup after loading the view.
     }
     
 
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }
