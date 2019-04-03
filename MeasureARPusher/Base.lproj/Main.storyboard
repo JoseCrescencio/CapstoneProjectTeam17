@@ -460,6 +460,9 @@
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="EIY-aS-zi1">
                                 <rect key="frame" x="304" y="231" width="94" height="29"/>
+                                <connections>
+                                    <action selector="levelStepper:" destination="tB8-FE-2mm" eventType="valueChanged" id="P1G-yn-5kE"/>
+                                </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbg-UY-M1E">
                                 <rect key="frame" x="236" y="236" width="60" height="24"/>
@@ -472,6 +475,9 @@
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="25" translatesAutoresizingMaskIntoConstraints="NO" id="HGg-C1-iTW">
                                 <rect key="frame" x="304" y="268" width="94" height="29"/>
+                                <connections>
+                                    <action selector="roomStepper:" destination="tB8-FE-2mm" eventType="valueChanged" id="yUL-Ep-Ho5"/>
+                                </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPb-9Q-1QG">
                                 <rect key="frame" x="236" y="273" width="60" height="24"/>
@@ -560,6 +566,9 @@
                                 <state key="normal" title="  Save  ">
                                     <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveButton:" destination="tB8-FE-2mm" eventType="touchUpInside" id="7S3-rZ-VQI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
