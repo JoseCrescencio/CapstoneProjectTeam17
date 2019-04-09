@@ -9,6 +9,7 @@ target 'MeasureARPusher' do
   pod "Parse"
   pod "Alamofire"
 
+
   target 'MeasureARPusherTests' do
     inherit! :search_paths
     # Pods for testing
@@ -18,8 +19,9 @@ target 'MeasureARPusher' do
     inherit! :search_paths
     # Pods for testing
   end
-
-
+ 
+  pod 'SVGKit'
+ 
   pod 'CollectionKit'
 
 end

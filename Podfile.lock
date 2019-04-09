@@ -1,6 +1,9 @@
 PODS:
   - Alamofire (4.8.1)
   - Bolts/Tasks (1.9.0)
+  - CocoaLumberjack (3.5.1):
+    - CocoaLumberjack/Core (= 3.5.1)
+  - CocoaLumberjack/Core (3.5.1)
   - CollectionKit (2.3.0):
     - CollectionKit/Core (= 2.3.0)
   - CollectionKit/Core (2.3.0)
@@ -8,25 +11,32 @@ PODS:
     - Parse/Core (= 1.17.2)
   - Parse/Core (1.17.2):
     - Bolts/Tasks (~> 1.9)
+  - SVGKit (2.1.0):
+    - CocoaLumberjack (~> 3.0)
 
 DEPENDENCIES:
   - Alamofire
   - CollectionKit
   - Parse
+  - SVGKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Bolts
+    - CocoaLumberjack
     - CollectionKit
     - Parse
+    - SVGKit
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  CocoaLumberjack: 2101f8a5508197a305e737d16c5c2e9e2157628c
   CollectionKit: 6910479bf865bfe49040e73322ce4b8fe8991231
   Parse: 3b31a3dd1777b07ee7f0caee32fafbff544483a5
+  SVGKit: 8a2fc74258bdb2abb54d3b65f3dd68b0277a9c4d
 
-PODFILE CHECKSUM: b489041b46ada410acdde63a170338f34bdd4f92
+PODFILE CHECKSUM: 176b2f61cbb2e8ccf0453f5b90713cac8153292f
 
 COCOAPODS: 1.6.1

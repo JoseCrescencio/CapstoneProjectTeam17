@@ -8,6 +8,8 @@
 
 
 import UIKit
+import SVGKit
+
 extension UIColor {
     static func random() -> UIColor{
         return UIColor(
@@ -91,7 +93,7 @@ class EditorPlansCollectionViewController: UICollectionViewController {
     
     func addItem() {
         items.append(Item(color: .random()))
-        
+      
     }
     
     override func viewDidLoad() {
@@ -99,7 +101,7 @@ class EditorPlansCollectionViewController: UICollectionViewController {
         
         collectionView?.setCollectionViewLayout(CustomFlowLayout(), animated: false)
         
-        for _ in 0...10 { addItem() }
+    
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -140,3 +142,8 @@ class EditorPlansCollectionViewController: UICollectionViewController {
         }
     }
 }
+
+
+
+
+
