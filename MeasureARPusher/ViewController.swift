@@ -144,6 +144,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         let markerNode = SCNNode(geometry: geometry)
         markerNode.position = SCNVector3(hitTestResult.worldTransform.columns.3.x, hitTestResult.worldTransform.columns.3.y, hitTestResult.worldTransform.columns.3.z)
+        print(markerNode.position)
         
         sceneView.scene.rootNode.addChildNode(markerNode)
         objs.append(markerNode)
@@ -153,6 +154,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         super.viewDidLoad()
         // Set the view's delegate
         sceneView.delegate = self
+        if (ARConfiguration.isSupported) {
+            // ARKit is supported. You can work with ARKit
+            print("supported")
+        } else {
+            // ARKit is not supported. You cannot work with ARKit
+            print("not Supported")
+        }
         // Set a padding in the text view
 //        statusTextView.textContainerInset =
 //            UIEdgeInsets(top: 20.0, left: 10.0, bottom: 10.0, right: 0.0)
@@ -164,19 +172,19 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     func setStatusText() {
 //        var text = "Status: \(status!)\n"
-//        text += "Tracking: \(getTrackigDescription())\n"
+//        text += "Tracking: \(getTrackingDescription())\n"
 //        statusTextView.text = text
 //
         var txt = "Status: \(status!)!\n Find a horizontal plane to start scan\n"
         if status == "READY" {
             txt = "Status: \(status!)!\n Begin placing markers on screen.\n"
         }
-        txt += "Tracking: \(getTrackigDescription())\n"
+        txt += "Tracking: \(getTrackingDescription())\n"
         statusText.text = txt
         
     }
     
-    func getTrackigDescription() -> String {
+    func getTrackingDescription() -> String {
         var description = ""
         if let t = trackingState {
             switch(t) {
