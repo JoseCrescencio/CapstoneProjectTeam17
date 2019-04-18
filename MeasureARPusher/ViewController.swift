@@ -72,7 +72,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var statusText: UITextView!
     
     @IBAction func onDone(_ sender: Any) {
-        self.performSegue(withIdentifier: "scanDone", sender: self)
+        self.dismiss(animated: true)
     }
     @IBAction func onRestart(_ sender: Any) {
         sceneView.scene.rootNode.enumerateChildNodes { (node, _) in
@@ -153,6 +153,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         super.viewDidLoad()
         // Set the view's delegate
         sceneView.delegate = self
+        
         // Set a padding in the text view
 //        statusTextView.textContainerInset =
 //            UIEdgeInsets(top: 20.0, left: 10.0, bottom: 10.0, right: 0.0)

@@ -25,8 +25,8 @@ class NewPlanViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var floorPlanButton: UIButton!
     
-    
-    //@IBOutlet weak var displayView: UITextView!
+    //Saved variable
+    var saved = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,19 +61,59 @@ class NewPlanViewController: UIViewController {
         floorPlan["levelCount"] = levelCount.text!
         floorPlan["roomCount"] = roomCount.text!
         floorPlan["additionalInfo"] = additionalInfo.text
-        floorPlan.saveInBackground {
-            (success: Bool, error: Error?) in
-            if (success) {
-                // The object has been saved.
-                //Maybe create pop-up for success
-            } else {
-                // There was a problem, check error.description
-                //Maybe create pop-up for failure
+        if emptyFields() && self.saved{
+            floorPlan.saveInBackground {
+                (success: Bool, error: Error?) in
+                if (success) {
+                    //Alert to notify a save was done
+                    self.myAlert(name: "Save Succesful",note: "Your information has been saved.")
+                    self.saved = false
+        
+                } else {
+                    //Alert to notify a save was NOT done
+                    self.myAlert(name: "Save Error",note: "Your information has not been saved!")
+                }
             }
         }
-        
+        else if saved == false{
+            //Alert to notify that a save has already been made.
+            self.myAlert(name: "Saved",note: "Your information has already been saved.")
+        }
+    }
+   //Function to alert user of empty textfields
+   func emptyFields() -> Bool{
+    
+        if floorPlanName.text?.isEmpty ?? true {
+            self.myAlert(name: "Missing information",note: "Your information was not saved.")
+            return false
+        }
+        else if customerName.text?.isEmpty ?? true {
+            self.myAlert(name: "Missing information",note: "Your information was not saved.")
+            return false
+        }
+        else if customerID.text?.isEmpty ?? true {
+            self.myAlert(name: "Missing information",note: "Your information was not saved.")
+            return false
+        }
+        else if additionalInfo.text?.isEmpty ?? true {
+            self.myAlert(name: "Missing information",note: "Your information was not saved.")
+            return false
+        }
+        return true
+
     }
     
+    //Alert function to notify user
+    func myAlert(name: String, note: String){
+        let alert  = UIAlertController(title: name, message: note, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+        }))
+        self.present(alert, animated: true, completion: nil)
+
+    }
+    
+    //Lets a user touch around the keyboard to remove it
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
         floorPlanName.resignFirstResponder()
         customerName.resignFirstResponder()
