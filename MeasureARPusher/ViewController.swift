@@ -9,6 +9,7 @@
 import UIKit
 import SceneKit
 import ARKit
+import JavaScriptCore
 
 extension SCNGeometry {
     class func lineFrom(vector vector1: SCNVector3, toVector vector2: SCNVector3) -> SCNGeometry {
@@ -72,6 +73,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var statusText: UITextView!
     
     @IBAction func onDone(_ sender: Any) {
+        
+        // Add every (x,y) pair to dictionary
+        
+        // Call Javascript function
+        
+        
+        
         self.performSegue(withIdentifier: "scanDone", sender: self)
     }
     @IBAction func onRestart(_ sender: Any) {
