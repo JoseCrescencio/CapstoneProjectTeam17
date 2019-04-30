@@ -16,7 +16,9 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var customerIDLabel: UILabel!
     @IBOutlet weak var levelCountLabel: UILabel!
     @IBOutlet weak var roomCountLabel: UILabel!
-    @IBOutlet weak var addInfoView: UITextView!
+    //@IBOutlet weak var addInfoView: UITextView!
+    @IBOutlet weak var infoView: UITextView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +28,8 @@ class DetailsViewController: UIViewController {
         customerIDLabel.text = plan["customerID"] as? String
         levelCountLabel.text = plan["levelCount"] as? String
         roomCountLabel.text = plan["roomCount"] as? String
-        addInfoView.text = plan["additionalInfo"] as? String
+        infoView.text = plan["additionalInfo"] as? String
+
         // Do any additional setup after loading the view.
     }
     
