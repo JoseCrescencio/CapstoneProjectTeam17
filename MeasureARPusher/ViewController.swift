@@ -9,6 +9,7 @@
 import UIKit
 import SceneKit
 import ARKit
+import JavaScriptCore
 
 extension SCNGeometry {
     class func lineFrom(vector vector1: SCNVector3, toVector vector2: SCNVector3) -> SCNGeometry {
@@ -71,9 +72,43 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 //    @IBOutlet weak var statusTextView: UITextView!
     @IBOutlet weak var statusText: UITextView!
     
-    @IBAction func onDone(_ sender: Any) {
-        self.dismiss(animated: true)
+    
+    func readJSONFromFile(fileName: String) -> Any?
+    {
+        var json: Any?
+        if let path = Bundle.main.path(forResource: fileName, ofType: "json", inDirectory: "website") {
+            do {
+                let fileUrl = URL(fileURLWithPath: path)
+                // Getting data from JSON file using the file URL
+                let data = try Data(contentsOf: fileUrl, options: .mappedIfSafe)
+                json = try? JSONSerialization.jsonObject(with: data)
+            } catch {
+                // Handle error here
+            }
+        }
+        return json
     }
+    
+    @IBAction func onDone(_ sender: Any) {
+    
+        for node in objs {
+            print("x:")
+            print(node.position.x)
+            print("y:")
+            print(node.position.y)
+        }
+        
+        self.performSegue(withIdentifier: "DrawRoom", sender: self)
+    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if (segue.identifier == "DrawRoom") {
+//            let sendData = segue.destination as! WebDisplayViewController
+//            sendData.data = "{\"kitchen\":[{\"x\":1,\"y\":5},{\"x\":1,\"y\":20},{\"x\":35,\"y\":20},{\"x\":35,\"y\":30},{\"x\":50,\"y\":30},{\"x\":50,\"y\":5},{\"x\":1,\"y\":5}],\"livingRoom\":[{\"x\":50,\"y\":30},{\"x\":70,\"y\":30},{\"x\":70,\"y\":20},{\"x\":50,\"y\":20},{\"x\":50,\"y\":30}]}"
+//        }
+//    }
+    
+    
     @IBAction func onRestart(_ sender: Any) {
         sceneView.scene.rootNode.enumerateChildNodes { (node, _) in
             node.removeFromParentNode()
