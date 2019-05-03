@@ -12,8 +12,9 @@ import Foundation
 
 class WebDisplayViewController: UIViewController, WKScriptMessageHandler{
 
-    var webView: WKWebView?
+    //var webView: WKWebView?
     var data: Any!
+    var webView: WKWebView!
     
     override func loadView() {
         super.loadView()
@@ -22,7 +23,7 @@ class WebDisplayViewController: UIViewController, WKScriptMessageHandler{
         let config = WKWebViewConfiguration()
 
         
-//        data = readJSONFromFile(fileName: "data") as! String
+        //data = readJSONFromFile(fileName: "data") as! String
         
         data = "{\"kitchen\":[{\"x\":105,\"y\":105},{\"x\":300,\"y\":105},{\"x\":300,\"y\":210},{\"x\":105,\"y\":210},{\"x\":105,\"y\":105}]}"
         
@@ -30,11 +31,18 @@ class WebDisplayViewController: UIViewController, WKScriptMessageHandler{
         
         contentController.addUserScript(userScript)
         
+        self.edgesForExtendedLayout = []
         
         config.userContentController = contentController
-        self.webView = WKWebView(frame: .zero, configuration: config)
+        self.webView = WKWebView(frame: self.view.bounds
+            , configuration: config)
         self.view = self.webView!
         
+    }
+    
+    @IBAction func onSave(_ sender: Any) {
+        self.presentingViewController?.dismiss(animated: false, completion: nil)
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
     func readJSONFromFile(fileName: String) -> Any?
