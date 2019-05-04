@@ -44,6 +44,7 @@ extension Float {
 class ViewController: UIViewController, ARSCNViewDelegate {
 
     var objs: [SCNNode] = []
+    var markers: [SCNNode] = []
     var startPoint: SCNVector3!
     var endPoint: SCNVector3!
     var numberOfTaps = 0
@@ -69,7 +70,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     @IBOutlet weak var sceneView: ARSCNView!
-//    @IBOutlet weak var statusTextView: UITextView!
     @IBOutlet weak var statusText: UITextView!
     
     
@@ -91,7 +91,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     @IBAction func onDone(_ sender: Any) {
     
-        for node in objs {
+        for node in markers {
             print("x:")
             print(node.position.x)
             print("y:")
@@ -114,15 +114,21 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             node.removeFromParentNode()
         }
         objs.removeAll()
+        markers.removeAll()
         numberOfTaps = 0
     }
     
     @IBAction func onUndo(_ sender: Any) {
+        markers.last?.removeFromParentNode()
+        markers.removeLast()
+        
         if objs.count == 1 {
             objs.last?.removeFromParentNode()
             objs.removeLast()
+            
             numberOfTaps = 0
         } else {
+            
             for i in 1...3 {
                 objs.last?.removeFromParentNode()
                 objs.removeLast()
@@ -150,16 +156,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 return
             }
             
-            // If first tap, add red marker. If second tap, add green marker and reset to 0
             if numberOfTaps == 1 {
                 startPoint = SCNVector3(hitTest.worldTransform.columns.3.x, hitTest.worldTransform.columns.3.y, hitTest.worldTransform.columns.3.z)
-                addRedMarker(hitTestResult: hitTest)
+                addMarker(hitTestResult: hitTest, color: .red)
             }
             else {
                 endPoint = SCNVector3(hitTest.worldTransform.columns.3.x, hitTest.worldTransform.columns.3.y, hitTest.worldTransform.columns.3.z)
                 
-                addRedMarker(hitTestResult: hitTest)
-                
+                addMarker(hitTestResult: hitTest, color: .red)
                 addLineBetween(start: startPoint, end: endPoint)
                 
                 addDistanceText(distance: SCNVector3.distanceFrom(vector: startPoint, toVector: endPoint), at: endPoint)
@@ -167,10 +171,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 startPoint = endPoint
             }
         }
-    }
-    
-    func addRedMarker(hitTestResult: ARHitTestResult) {
-        addMarker(hitTestResult: hitTestResult, color: .red)
     }
     
     func addMarker(hitTestResult: ARHitTestResult, color: UIColor) {
@@ -182,34 +182,24 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         sceneView.scene.rootNode.addChildNode(markerNode)
         objs.append(markerNode)
+        markers.append(markerNode)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Set the view's delegate
-        sceneView.delegate = self
         
-        // Set a padding in the text view
-//        statusTextView.textContainerInset =
-//            UIEdgeInsets(top: 20.0, left: 10.0, bottom: 10.0, right: 0.0)
-        // Set the initial mode
+        sceneView.delegate = self
         mode = .waitingForMeasuring
-        // Display the initial status
         setStatusText()
     }
     
     func setStatusText() {
-//        var text = "Status: \(status!)\n"
-//        text += "Tracking: \(getTrackigDescription())\n"
-//        statusTextView.text = text
-//
         var txt = "Status: \(status!)!\n Find a horizontal plane to start scan\n"
         if status == "READY" {
             txt = "Status: \(status!)!\n Begin placing markers on screen.\n"
         }
         txt += "Tracking: \(getTrackigDescription())\n"
         statusText.text = txt
-        
     }
     
     func getTrackigDescription() -> String {
@@ -240,18 +230,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        // Create a session configuration with plane detection
         let configuration = ARWorldTrackingConfiguration()
-        
-        //horizontal plane will be added to the scene view's session
         configuration.planeDetection = .horizontal
-        // Run the view's session
         sceneView.session.run(configuration)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        // Pause the view's session
         sceneView.session.pause()
     }
     
@@ -260,8 +245,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
-        // Call the method asynchronously to perform
-        //  this heavy task without slowing down the UI
         DispatchQueue.main.async {
             self.measure(time: time)
         }
@@ -276,9 +259,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             if mode == .measuring {
                 status = "MEASURING"
             }
-        } /*else {
-            status = "NOT READY"
-        }*/
+        }
         setStatusText()
     }
     
@@ -292,7 +273,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     func addDistanceText(distance: Float, at point: SCNVector3) {
         let textGeometry = SCNText(string: String(format: "%.1f\"", distance.metersToInches()), extrusionDepth: 1)
-        textGeometry.font = UIFont.systemFont(ofSize: 10)
+        textGeometry.font = UIFont.systemFont(ofSize: 20)
         textGeometry.firstMaterial?.diffuse.contents = UIColor.black
         
         let textNode = SCNNode(geometry: textGeometry)
