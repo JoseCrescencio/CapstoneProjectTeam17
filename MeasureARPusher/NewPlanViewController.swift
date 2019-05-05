@@ -27,12 +27,15 @@ class NewPlanViewController: UIViewController {
     
     //Saved variable
     var saved = true
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         saveButton.layer.cornerRadius = 4
         floorPlanButton.layer.cornerRadius = 4
-        
+
+        saveButton.isHidden = true
+
         floorPlanName.delegate = self as? UITextFieldDelegate
         customerName.delegate = self as? UITextFieldDelegate
         customerID.delegate = self as? UITextFieldDelegate
@@ -80,6 +83,11 @@ class NewPlanViewController: UIViewController {
             self.myAlert(name: "Saved",note: "Your information has already been saved.")
         }
     }
+    
+    @IBAction func startFloorPlan(_ sender: Any) {
+        saveButton.isHidden = false
+    }
+    
    //Function to alert user of empty textfields
    func emptyFields() -> Bool{
     
