@@ -101,13 +101,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         self.performSegue(withIdentifier: "DrawRoom", sender: self)
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if (segue.identifier == "DrawRoom") {
-//            let sendData = segue.destination as! WebDisplayViewController
-//            sendData.data = "{\"kitchen\":[{\"x\":1,\"y\":5},{\"x\":1,\"y\":20},{\"x\":35,\"y\":20},{\"x\":35,\"y\":30},{\"x\":50,\"y\":30},{\"x\":50,\"y\":5},{\"x\":1,\"y\":5}],\"livingRoom\":[{\"x\":50,\"y\":30},{\"x\":70,\"y\":30},{\"x\":70,\"y\":20},{\"x\":50,\"y\":20},{\"x\":50,\"y\":30}]}"
-//        }
-//    }
-    
     
     @IBAction func onRestart(_ sender: Any) {
         sceneView.scene.rootNode.enumerateChildNodes { (node, _) in
